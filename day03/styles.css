@@ -1,0 +1,41 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.container{
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.hero{
+    padding: 50px;
+    background: #23424A;
+    color: white;
+}
+.hero__text{
+    width: 60%;
+}
+.btn{
+    margin-top: 3em;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #38cfd9;
+    text-transform: uppercase;
+    color: #23424A;
+    font-weight: 900;
+    padding: .75rem 1rem;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus{
+    opacity: .75;
+}

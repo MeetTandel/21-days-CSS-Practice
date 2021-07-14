@@ -1,0 +1,310 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --darkest-blue: #2E323F;
+    --dark-blue: #3b4050;
+    --grey: #6f737f;
+    --light-yellow: #a59678;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
+/* px to rem
+16 -> 1
+18 -> 1.125
+21 -> 1.135
+24 -> 1.5
+30 -> 1.875
+36 -> 2.25
+90 -> 5.625
+
+ */
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    background: var(--darkest-blue);
+    padding: 1em;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072A2D;
+    color: white;
+    transition: opacity 250ms ease;
+    position: absolute;
+    left: 0;
+}
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+
+.nav {
+    visibility: hidden;
+    height: 0;
+    align-items: center;
+    position: realtive;
+}
+
+.nav-visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+.nav_list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*  */
+
+.nav_list-primary{
+    margin-bottom:2em;
+}
+.nav_item{
+    margin-top: 0.5em;
+}
+.nav_link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+.nav_link:hover,
+.nav_link:focus{
+    opacity: 0.65;
+}
+.nav_link-button{
+    background: white;
+    border-radius: 100px;
+    background: var(--light-yellow);
+    color: white;
+    padding: 0.25em 0.75em;
+}
+.logo {
+    height: 30px;
+}
+
+.hero {
+    background: var(--dark-blue);
+    padding: 3em 1em;
+}
+
+.hero-text {
+    color: white;
+}
+
+.intro-title {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    margin-top: 0;
+    line-height: 1.1;
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.intro-subtext {
+    color: var(--light-yellow);
+}
+
+.intro-button {
+    background-color: var(--light-yellow);
+    border: none;
+    border-radius: 100px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.5em;
+    text-transform: uppercase;
+    padding: 0.25em 0.75em;
+}
+
+.section-one {
+    background: lightgray;
+    text-align: center;
+    padding: 3em 1em;
+}
+
+.sub-heading {
+    color: var(--light-yellow);
+    font-size: 1.875rem;
+}
+
+.section-one .col {
+    margin-bottom: 30px;
+}
+
+.section-one>p {
+    font-size: 1.125rem;
+}
+
+.section-two {
+    padding: 3em 1em;
+}
+
+.left-side>h1 {
+    color: var(--light-yellow);
+    font-size: 2rem;
+}
+
+.left-side>p {
+    font-size: 1.135rem;
+}
+
+.aside-section {
+    background: var(--dark-blue);
+    color: white;
+    text-align: center;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.aside-section>h2 {
+    font-size: 1.875rem;
+}
+
+.aside-section>p {
+    font-size: 1.125rem;
+}
+
+footer {
+    background: var(--dark-blue);
+    padding: 3em;
+    color: white;
+}
+
+footer h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    /* margin-bottom: 1em; */
+    margin: 1em;
+}
+
+footer h2 {
+    color: var(--light-yellow);
+    margin: 0.5em 0;
+}
+footer ul{
+    margin: 0;
+    padding: 0;
+}
+/* .sub-row{
+    margin
+} */
+footer li{
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0.5em;
+}
+
+@media (min-width: 800px){
+    .nav-toggle{
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        justify-content: flex-end;
+        height: auto;
+    }
+    .nav_list{
+        display: flex;
+        margin: 0;
+    }
+    .nav_item{
+        margin: 0 0 0 1.5em;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .col + .col{
+        margin-left: 3em;
+    }
+
+    .intro-side{
+        margin-top: 5em;
+    }
+
+    .hero-text{
+        width: 85%;
+        line-height: 1.5;
+    }
+    .left-side{
+        width: 60%;
+    }
+    aside{
+        width: 40%;
+    }
+
+    .about{
+        width: 30%;
+    }
+}
